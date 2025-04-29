@@ -105,3 +105,5 @@ T4, V100, P100, P4가 여기에 해당됩다.
 저장소 즉, VM에 장착되는 스토리지가 절대적으로 성능이 뛰어나거나 하는 일은 
 발생하지 않는 기대입니다.  
 https://cloud.google.com/compute/docs/storage-optimized-machines
+
+<제작 중>
