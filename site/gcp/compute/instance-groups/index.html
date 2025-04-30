@@ -12,13 +12,13 @@
         <meta name="author" content="Kwanghoon Jhin">
       
       
-        <link rel="canonical" href="https://electronicnomad.net/friday/aws/networking/transit-gateway/">
+        <link rel="canonical" href="https://electronicnomad.net/friday/gcp/compute/instance-groups/">
       
       
-        <link rel="prev" href="../vpc-peering/lab/">
+        <link rel="prev" href="../virtual-machines/">
       
       
-        <link rel="next" href="objectives/">
+        <link rel="next" href="../../../linux/">
       
       
       <link rel="icon" href="../../../favicon-plumping-black.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>개요 - Plumbers' Friday</title>
+        <title>인스턴스 그룹 - Plumbers' Friday</title>
       
     
     
@@ -169,7 +169,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              개요
+              인스턴스 그룹
             
           </span>
         </div>
@@ -305,17 +305,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
@@ -328,7 +330,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Google Cloud
@@ -339,17 +341,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
         
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
             
@@ -362,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             Compute
@@ -375,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gcp/compute/virtual-machines/" class="md-nav__link">
+      <a href="../virtual-machines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,9 +397,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../gcp/compute/instance-groups/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    인스턴스 그룹
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -404,6 +428,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    고가용 시스템에 대한 옛날 이야기
+  </a>
+  
+    <nav class="md-nav" aria-label="고가용 시스템에 대한 옛날 이야기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerant-system" class="md-nav__link">
+    Fault tolerant system
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ha-system" class="md-nav__link">
+    HA system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    관리형 인스턴스 그룹
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    비관리형 인스턴스 그룹
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -711,19 +796,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -736,7 +819,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             AWS
@@ -783,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/" class="md-nav__link">
+      <a href="../../../aws/forecast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/preparation/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/preparation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/prepare-training-data/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/prepare-training-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/dataset-groups/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/dataset-groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/create-target-time-series-dataset/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/create-target-time-series-dataset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -917,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/import-target-time-series-data/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/import-target-time-series-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -937,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/train-a-predictor/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/train-a-predictor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -957,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/generate-forecast/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/generate-forecast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/handson-labs/forecast-lookup/" class="md-nav__link">
+      <a href="../../../aws/forecast/handson-labs/forecast-lookup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/assessment/" class="md-nav__link">
+      <a href="../../../aws/forecast/assessment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forecast/references/" class="md-nav__link">
+      <a href="../../../aws/forecast/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,19 +1134,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
@@ -1076,7 +1157,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             AWS Networking
@@ -1089,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../aws/networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1109,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../objectives/" class="md-nav__link">
+      <a href="../../../aws/networking/objectives/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../preparations/" class="md-nav__link">
+      <a href="../../../aws/networking/preparations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../privatelink/" class="md-nav__link">
+      <a href="../../../aws/networking/privatelink/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../privatelink/lab/" class="md-nav__link">
+      <a href="../../../aws/networking/privatelink/lab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vpc-peering/" class="md-nav__link">
+      <a href="../../../aws/networking/vpc-peering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vpc-peering/lab/" class="md-nav__link">
+      <a href="../../../aws/networking/vpc-peering/lab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,19 +1392,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" >
         
           <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
             
@@ -1336,7 +1415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_6">
             <span class="md-nav__icon md-icon"></span>
             Transit Gateway
@@ -1347,29 +1426,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    개요
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../aws/networking/transit-gateway/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,46 +1437,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#transit-gateway" class="md-nav__link">
-    Transit Gateway의 유용성
-  </a>
-  
-    <nav class="md-nav" aria-label="Transit Gateway의 유용성">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vpc-peering" class="md-nav__link">
-    VPC Peering과 비교
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1429,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="objectives/" class="md-nav__link">
+      <a href="../../../aws/networking/transit-gateway/objectives/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1449,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lab/" class="md-nav__link">
+      <a href="../../../aws/networking/transit-gateway/lab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1469,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="testing/" class="md-nav__link">
+      <a href="../../../aws/networking/transit-gateway/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="network-manager/" class="md-nav__link">
+      <a href="../../../aws/networking/transit-gateway/network-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cleanup/" class="md-nav__link">
+      <a href="../../../aws/networking/cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,22 +1592,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#transit-gateway" class="md-nav__link">
-    Transit Gateway의 유용성
+  <a href="#_2" class="md-nav__link">
+    고가용 시스템에 대한 옛날 이야기
   </a>
   
-    <nav class="md-nav" aria-label="Transit Gateway의 유용성">
+    <nav class="md-nav" aria-label="고가용 시스템에 대한 옛날 이야기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vpc-peering" class="md-nav__link">
-    VPC Peering과 비교
+  <a href="#fault-tolerant-system" class="md-nav__link">
+    Fault tolerant system
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ha-system" class="md-nav__link">
+    HA system
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    관리형 인스턴스 그룹
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    비관리형 인스턴스 그룹
+  </a>
   
 </li>
       
@@ -1610,60 +1650,60 @@
   
 
 
-<h1 id="_1">개요<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Transit Gateway는 서로 다른 네트워크를 하나로 연결해 줍니다.
-일종의 허브와 같은 역할을 하며 연결 이외의 기능은 없습니다. 하지만,
-단 하나의 기능이 많은 것을 해결하는 경우가 있습니다.</p>
-<h2 id="transit-gateway">Transit Gateway의 유용성<a class="headerlink" href="#transit-gateway" title="Permanent link">&para;</a></h2>
-<h3 id="vpc-peering">VPC Peering과 비교<a class="headerlink" href="#vpc-peering" title="Permanent link">&para;</a></h3>
-<p>흔희 Transit Gateway의 유용성을 설명할 때 대칭에 놓는 것은 VPC peering입니다.
-일단, 아래의 그림을 보겠습니다.</p>
-<p><img alt="VPC peering connections" src="overview-peering.svg" /></p>
-<p>VPC peering으로 VPC 7개를 연결했습니다. Full-mesh 연결입니다. 복잡합니다.
-네, 조금 더 복잡하게 보이라고 제가 마우스를 이리저리 돌린 경향이 없지않아 있습니다.
-하지만, 연결 선의 개수를 정확합니다. 그럼, 다음의 그림을 보겠습니다.</p>
-<p><img alt="Transit Gateway connections" src="overview-tgw.svg" /></p>
-<p>복잡해 보였던 VPC peering 연결을 위 그림처럼 transit gateway로 단순화 시킬 수 있습니다.
-이 그림은 어떤 의도를 결부시키더라도 더 복잡하게 보이게 하거나 더 단순하게 보이게 하기가 어렵습니다.</p>
-<p>연결선의 개수만 따져보면, VPC peering은 21개인데 transit gateway는 단 7개입니다.</p>
-<div class="highlight"><pre><span></span><code>n(n-1)/2
-</code></pre></div>
-<p>VPC peering으로 full-mesh 형태의 연결을 구상할 때 총 필요한 연결의 개수는 위에 적혀 있는
-매우 간단한 산술식으로 예상할 수 있습니다. 만약 10개의 VPC를 peering으로 연결한다면
-10(10-1)/2 = 45,
-45개의 연결이 필요하다는 계산을 할 수 있습니다.</p>
-<p>Transit gateway로 VPC를 연결할 때 다른 region간의 연결도 아래의 그림처럼 가능합니다.</p>
-<p><img alt="Transit Gateway connections" src="overview-tgw-inter-region.svg" /></p>
-<p>위 그림에서 짐작할 수 있듯이 transit gateway는 region에 종속됩니다.
-따라서 다른 region과의 연결은 각 region에 transit gateway를 두고
-각 region에 있는 transit gateway를 peer로 연결함으로 구성할 수 있습니다.</p>
-<p>Transit gateway는 단순히 VPC 간의 연결 뿐만 아니라,
-site-to-site VPN도 수용하고 있습니다.
-그리고 direct connect의 direct connect gateway도 연결할 수 있습니다.
-그래서, transit gateway는 지금까지 시장에 선보인 어떤 연결 구성 방식보다
-많은 것을 수용하고 가장 간단한 구성을 가지고 있습니다.</p>
-<p>다음의 단계에서부터 수행하면서 알게 되는 부분이기도 하지만,
-transit gateway는 VPC 간의 연결을 꾀하지만, 연결의 단위는 subnet입니다.
-즉, 서로 다른 VPC 내에 있는 subnet을 서로 연결함으로써
-VPC 간의 연결을 가져오게 됩니다 - 어쩌면 당연한 것이기도 합니다.
-VPC 내의 subnet을 transit gateway로 연결한다고 하여, 연결되는 subnet
-이외의 subnet에 있는 자원은 transit gateway로 연결할 수 없는 것은 아닙니다.
-이 부분은 route table이 해결해 줍니다.</p>
-<p>Route table은 transit gateway의 핵심 구성 요소라고도 할 수 있습니다.
-모든 연결의 정의는 route table로 이루어집니다. 단순히 transit gateway가
-연결(attached)되었다고 통신이 되는 건 아닙니다. 우리가 기억해 낼 수 있는
-많은 네트워크 장비들이 그러하듯 말이죠. route table을 설정함으로써 연결성을 확보한다는
-이야기는 달리 말하면 연결을 제어할 수 있다는 말도 됩니다. transit gateway는
-route table 설정으로 특정 연결을 허용하거나 불허할 수도 있습니다.</p>
-<p>AWS 공식 한국어 문서에서는 'transit gateway'를 '전송 게이트웨이'로 번역하고 있습니다.
-본 문서에서는 원어 그대로인, transit gateway 혹은 약어, TGW로 표기합니다.</p>
+<h1 id="_1">인스턴스 그룹<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>인스턴스 그룹(Instance groups)는 
+관리형 인스턴스 그룹(Managed instance groups)과 
+비관리형 인스턴스 그룹(Unmanaged instance groups)로 나뉩니다. 그리고 관리형 인스턴스 그룹은 Stateless를 위한 구성과 Stateful을 위한 구성으로 나누어 볼 수 있습니다.</p>
+<pre class="mermaid"><code>graph LR;
+    A[인스턴스 그룹 Instance groups] --&gt; B[관리형 인스턴스 그룹 Managed instance groups];
+    A --&gt; C[비관리형 인스턴스 그룹 Unmanaged instance group];
+    B --&gt; D[Stateless];
+    B --&gt; E[Stateful];</code></pre>
+<h2 id="_2">고가용 시스템에 대한 옛날 이야기<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>고가용성 컴퓨팅 시스템을 만들 때 크게 두가지의 방법을 우리는 그 동안 선택해 왔습니다. </p>
+<h3 id="fault-tolerant-system">Fault tolerant system<a class="headerlink" href="#fault-tolerant-system" title="Permanent link">&para;</a></h3>
+<p>첫번째는 절대 죽지 않을 것만 같은 하드웨어 설계를 반영하여 SPOF(single point of failure)를 구조적으로 
+제거하고 공급 전력이 끊기지만 (이 또한 이중화 이상) 않는다면 단순한 하드웨어 실패(이 또한 잘 일어나지 않게)로
+컴퓨터 자체가 멈추지 않도록 설계하는 것입니다. 동일한 성능과 용량에 비하여 월등히 고가인 이러한 시스템을
+Fault tolerant system[폴트 톨러런트 시스템]이라고 부릅니다.</p>
+<p>우리 말로는, 항-장애-시스템, 항-결함-시스템, 혹은 결함-감내-시스템 등으로 
+번역/통용되었지만 정확한 원래의 느낌을 전달하기엔
+부족한 건 어쩔 수 없습니다.</p>
+<p>이러한 fault tolerant system은 Cray, Sun Microsystems 등 
+과거 여러 서버 시스템 제작사에서 출시를 했으며, 
+mission-critical 업무에 적용되고는 했습니다. 국방 통신 등 생각보다 광범위한 고객이 있었습니다.
+지금은 거의 잊혀진 시스템이 되었습니다. 제가 경험한 마지막 fault tolerant system은 
+Sun Microsystems의 <a href="https://docs.oracle.com/cd/E19102-01/n1800.srvr/index.html">FT1800</a>입니다. 
+인상적이었고 까다롭고 재미있는 시스템이었습니다.</p>
+<p>Fault tolerant system은 단순히 하드웨어만 설계를 해 낸다고 해서 동작하는 것이 아닙니다.
+하드웨어의 변화를 감지하고 그에 대응하여 프로세스들과 디바이스 등을 정리하고 재설정하는 것은
+운영체제 그리고 그 핵심인 커널의 몫이기 때문입니다. 운영체제에서 그것을 할 수 있어야 
+하드웨어의 변화/변경에도 서비스를 유지할 수 있습니다.
+그래서, fault tolerant system은 만들기도 어렵고, 유지하기도 쉽지 않고, 가격도 상당하며 
+새로운 기술과 IT 시스템에 대한 관념이 변화하면서 서서히 잊혀지기 시작하여 지금은
+오래된 유산처럼 남아 있습니다.</p>
+<h3 id="ha-system">HA system<a class="headerlink" href="#ha-system" title="Permanent link">&para;</a></h3>
+<p>HA, High-availability system은 상위 제목과 같은 고가용 시스템으로 번역하는 게 
+맞는 것 같은데, 우리나라 업계에서는 '서버 이중화' 등으로 자주 언급되었습니다.
+HA 시스템은 active-standby로 구성에 참여하는 단일 시스템에 대한 역할을 구분하고 정의하고 
+설계에 반영합니다. </p>
+<h2 id="_3">관리형 인스턴스 그룹<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>관리형 인스턴스 그룹은, 영문표기(Managed Instance Groups)의 두문자를 따서, MIG라고도 부릅니다.
+여기에서도 앞으로 MIG라고 부르겠습니다.</p>
+<p>MIG는 autohealing 그리고 autoscaling을 기본으로 하는 유연한 외부대응으로 
+항상 사용자의 서비스를 유지할 수 있도록 합니다.</p>
+<h2 id="_4">비관리형 인스턴스 그룹<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>이름에서부터 알 수 있듯이, MIG의 비관리형 유형입니다.<br />
+MIG에서 기대할 수 있는 여러 고유 기능을 제거하는 대신
+특목적적인 워크로드를 수용할 수 있게 설계되어 있습니다. </p>
+<p>&lt;제작 중&gt;</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-05-20T14:13:38+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-05-20</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-04-29T15:37:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-29</span>
       
     
   </small>
