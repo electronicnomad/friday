@@ -1,9 +1,9 @@
 # 인스턴스 그룹
 
-인스턴스 그룹(Instance groups)는 
-관리형 인스턴스 그룹(Managed instance groups)과 
-비관리형 인스턴스 그룹(Unmanaged instance groups)로 나뉩니다. 그리고 관리형 인스턴스 그룹은 Stateless를 위한 구성과 Stateful을 위한 구성으로 나누어 볼 수 있습니다.
-
+인스턴스 그룹(Instance groups)는
+관리형 인스턴스 그룹(Managed instance groups)과
+비관리형 인스턴스 그룹(Unmanaged instance groups)로 나뉩니다. 
+그리고 관리형 인스턴스 그룹은 Stateless를 위한 구성과 Stateful을 위한 구성으로 나누어 볼 수 있습니다.
 
 ```mermaid
 graph LR;
@@ -62,6 +62,6 @@ MIG는 autohealing 그리고 autoscaling을 기본으로 하는 유연한 외부
 
 이름에서부터 알 수 있듯이, MIG의 비관리형 유형입니다.  
 MIG에서 기대할 수 있는 여러 고유 기능을 제거하는 대신
-특목적적인 워크로드를 수용할 수 있게 설계되어 있습니다. 
+특목적적인 워크로드를 수용할 수 있게 설계되어 있습니다.
 
 <제작 중>
